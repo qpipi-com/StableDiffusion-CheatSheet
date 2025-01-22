@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Stable Diffusion 1.5 - Cheat Sheet</title>
+<title>Stable Diffusion 艺术风格速查数据表</title>
 <link href="./img/other/favicon.ico" rel="icon" type="image/x-icon">
 <style>
 /* roboto-condensed-regular - latin */
@@ -97,7 +97,7 @@ body.extrainfo #listedartists th:nth-child(7), body.extrainfo #listedartists  td
 <script type="text/javascript">
 document.addEventListener("DOMContentLoaded",function(event){
 
-    var SearchEngine = 'https://www.google.com/search?q=';
+    var SearchEngine = 'https://www.baidu.com/s?wd=';
     var outputdata = '';
     var outputExcluded = '';
     var tags = {};
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded",function(event){
     };
 
     outputdata = outputdata + '<table id="listedartists">';
-    outputdata = outputdata + '<tr><th></th><th>Name</th><th>Born</th><th></th><th>Checkpoint</th><th>Categories</th><th>Extrainfo</th></tr>';
+    outputdata = outputdata + '<tr><th></th><th>姓名</th><th>生于</th><th>逝世</th><th>大模型(例子)</th><th>类别</th><th>附加信息</th></tr>';
 
     //Put JSON in DOM
     for(var i=0; i<data.length; i++){
@@ -238,7 +238,7 @@ document.addEventListener("DOMContentLoaded",function(event){
 
 <header>
 
-    <h1>Stable Diffusion 1.5 - Cheat Sheet Data</h1>
+    <h1>Stable Diffusion 艺术风格速查数据表</h1>
     
 </header>
 
@@ -246,12 +246,12 @@ document.addEventListener("DOMContentLoaded",function(event){
 
     <h2>Listed Artists</h2>
 
-    <div id="selectmore">Show me
-        <label for="born"><input type="checkbox" id="born" name="born" checked> Born</label>
-        <label for="death"><input type="checkbox" id="death" name="death" checked> Death</label>
-        <label for="checkpoint"><input type="checkbox" id="checkpoint" name="checkpoint"> Checkpoint</label>
-        <label for="categories"><input type="checkbox" id="categories" name="categories" checked> Categories</label>
-        <label for="extrainfo"><input type="checkbox" id="extrainfo" name="extrainfo"> Notes</label>
+    <div id="selectmore">显示：
+        <label for="born"><input type="checkbox" id="born" name="born" checked> 出生</label>
+        <label for="death"><input type="checkbox" id="death" name="death" checked> 逝世</label>
+        <label for="checkpoint"><input type="checkbox" id="checkpoint" name="checkpoint"> 大模型</label>
+        <label for="categories"><input type="checkbox" id="categories" name="categories" checked> 类别</label>
+        <label for="extrainfo"><input type="checkbox" id="extrainfo" name="extrainfo"> 附加信息</label>
     </div>
 
     <div id="allthestyles"></div>
@@ -265,19 +265,19 @@ document.addEventListener("DOMContentLoaded",function(event){
     <p>Manually checked. Hover over colors for more info.</p>
     
     <p class="legend">
-        <span class="style-404">█</span> Artist not known by Stable Diffusion<br>
-        <span class="style-304">█</span> Something is recognized, but it's not related to the artist<br>
-        <span class="style-301">█</span> Something is recognized, but results are too different<br>
-        <span class="style-205">█</span> Artist is recognized, but difficult to prompt/not flexible<br>
-        <span class="style-204">█</span> Artist is recognized, but too different/generic<br>
-        <span class="style-500">█</span> Other
+<span class=“style-404”>█</span>稳定扩散不知名的艺术家<br>
+<span class=“style-304”>█</span>有些东西被识别出来，但与艺术家无关<br>
+<span class=“style-301”>█</span>已识别出某些内容，但结果差异太大<br>
+<span class=“style-205”>█</span>艺术家被识别，但很难提示/不灵活<br>
+<span class=“style-204”>█</span>艺术家已被识别，但差异太大/通用<br>
+<span class=“style-500”>█</span>其他
     </p>
 
     <div id="excludedArtists"></div>
     
 </section>
 
-<footer>Created 2023 - Version 1.2.0 - <a href="https://github.com/SupaGruen/StableDiffusion-CheatSheet">GitHub</a></footer>
+<footer>&copy; <a href="https://www.qpipi.com" target="_blank">Qpipi.com</a> - by <a href="https://github.com/SupaGruen/StableDiffusion-CheatSheet" target="_blank">GitHub</a></footer>
 
 </body>
 </html>
