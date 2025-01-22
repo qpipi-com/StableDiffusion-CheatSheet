@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Stable Diffusion 1.5 - Cheat Sheet</title>
+<title>Stable Diffusion 艺术风格速查表</title>
 <link href="./img/other/favicon.ico" rel="icon" type="image/x-icon">
 <link href="./src/style.css" rel="stylesheet">
 <script src="./src/lazyload.min.js"></script>
@@ -15,19 +15,21 @@
 
 <header>
 
-    <h1>Stable Diffusion 1.5 - Cheat Sheet</h1>
+    <h1>Stable Diffusion 艺术风格速查表</h1>
     
     <nav>
         <ul>
-            <li><a class="mbut" data-page="styles" href="#">Styles</a></li>
-            <li><a class="mbut" data-page="info" href="#">Metadata</a></li>
-            <li><a class="mbut" data-page="notes" href="#">Notes</a></li>
-            <li><a class="mbut" data-page="about" href="#">About</a></li>
+            <li><a class="mbut" data-page="styles" href="#">艺术风格</a></li>
+            <li><a class="mbut" data-page="info" href="#">读图提示</a></li>
+            <li><a class="mbut" data-page="notes" href="#">注释笔记</a></li>
+            <li><a class="mbut" data-page="about" href="#">关于设置</a></li>
+            <li><a href="https://prompt.qpipi.com" target="_blank">在线提示</a></li>
+            <li><a href="https://www.qpipi.com" target="_blank">Qpipi AI绘图</a></li>
         </ul>
         
         <div id="suche">
-            <a href="#" class="filterbut">Filter</a>
-            <label for="searchbox" class="is-size-5">Search</label>
+            <a href="#" class="filterbut">筛选</a>
+            <label for="searchbox" class="is-size-5">搜索</label>
             <input type="text" id="searchbox" placeholder="Search">
             <a href="#" id="clearsearch">&times;</a>
         </div>
@@ -42,24 +44,23 @@
 </noscript>
 
 <section id="styles">
-    <h3>Artist Inspired Styles <span id="searchinfo"></span></h3>
-    <p>A collection of what Stable Diffusion imagines these artists' styles look like.</p>
-    <p>While having an overview is helpful, keep in mind that these styles only imitate certain aspects of the artist's work (color, medium, location, etc.). They are limited by the rather superficial knowledge of SD, but can probably give you a good base for your own creations.</p>
+    <h3>艺术家风格 <span id="searchinfo"></span></h3>
+    <p>这是Stable Diffusion对这些艺术家风格的想象。</p><p>虽然有一个概述是很有用的，但请记住，这些风格只模仿艺术家作品的某些方面(颜色、介质、位置等)。它们受到SD相当肤浅的知识的限制，但可能可以为您自己的创作提供良好的基础。</p>
     <div id="allthestyles"></div>
     <div id="notavail"></div>
 </section>
 
 <section id="info">
 
-    <h3>Image Metadata</h3>
+    <h3>AI绘图 TAG Prompt 提示在线读取</h3>
     
-    <p>This will check an image for embedded Stable Diffusion data.</p>
+    <p>将AI绘制的图片拖放入读取框，自动获取图像的TAG Prompt提示。</p>
     
     <div id="metadataboxes">
         <div id="drop-area">
             <span id="clearimage">&times;</span>
             <form id="my-form">
-                <p>Drop Image Here</p>
+                <p>将图片文件拖放到此处</p>
                 <input type="file" id="fileElem" accept="image/*" onchange="handleFiles(this.files)">
             </form>
             <div id="gallery"></div>
@@ -72,7 +73,7 @@
 
 <section id="notes">
 
-    <h3>Prompt Examples - Art Media</h3>
+    <h3>Prompt 提示示例 - 艺术媒体</h3><p>点击图片的文字栏直接复制使用。</p>
 
     <h4>Photo</h4>
     <div class="examplegallery">
@@ -244,12 +245,12 @@
     
 
 
-    <h3>Image Dimensions</h3>
+    <h3>图像尺寸</h3>
     
-    <p>Stable Diffusion was trained with base dimensions of 512 pixels (SD 1.5) and 768 pixels (SD 2/2.1).<br>While it's not necessary to stick to multiples of 128, it's a good place to start.</p>
+    <p>Stable Diffusion 以512像素(SD 1.5)和768像素(SD 2/2.1)为基础尺寸进行训练。虽然没有必要坚持使用128的倍数，但这是一个很好的起点。</p>
     <div class="numberline"><span>128</span><span>256</span><span>384</span><span class="highlight">512</span><span>640</span><span class="highlight">768</span><span>896</span><span>1024</span></div>
 
-    <p><strong>Some of the common ratios in SD dimensions:</strong></p>
+    <p><strong>SD 尺寸中的一些常见比率：</strong></p>
     <table id="dimensions">
         <tr>
             <td>Square</td>
@@ -298,7 +299,7 @@
         </tr>
     </table>
     
-    <h3>Art History - Some Pointers</h3>
+    <h3>>艺术史一些要点</h3>
     
     <ul id="arthistory">
         <li>
@@ -440,66 +441,66 @@
 
 <section id="about">
     
-    <h3>Data and Documentation</h3>
+    <h3>数据和文件</h3>
     
-    <p>Use <a href="./only-data.html" target="_blank">only-data.html</a> for a version <strong>without images</strong>.<br>That page also includes a list of all artists that were checked for availability.</p>
-    <p class="highlightp">Information on how the images were generated and how to check if an artist style is available can be found on the <a href="./documentation/index.html" target="_blank">documentation page</a>.</p>
-    <p>The JSON data files had to be changed to .js and wrapped with a variable to allow offline use (CORS).</p>
+    <p还有一个<a href="./only-data.html" target="_blank">only-data.html</a>没有图片的版本。<br>该页还包括已检查可用性的所有艺术家的列表。</p><p class="highlightp">有关如何生成图像以及如何检查是否可用的艺术家风格的信息可以在<a href="https://www.qpipi.com/29351/" target="_blank">查看文档页面</a>.</p>
+        <h3>可能的错误</h3><p>所有的信息都是精心收集的，然而，错误总会发生。当艺术家们很早期就开始创作，准确位置信息有时很难获得，或者如果他的年龄介于两个世纪之间，就很难获得准确的时代提示。</p>
     
+
+
+    <h3>Errors</h3>
+    
+    <p>All information has been collected with the utmost care, however, mistakes happen. Location information is sometimes difficult when artists move very early in life, or the indication of the era, if the lifetime falls between two centuries.</p>
+
+    <h3>设置</h3>
+
+    <h4>允许复制类别</h4>
+    
+    <div>
+        <input type="checkbox" id="copycat" name="copycat">
+        <label for="copycat">我通过点击来复制类别(自动重新加载页面)</label>
+    </div>
+
+    <h4>喜欢的样式备份</h4>
+    
+    <p>万一有什么东西坏了，可以让你保存你喜欢的风格的备份。</p>
+    <p><strong>点击“导入”将替换你喜欢的样式</strong> 与什么是在这个文本字段。<br>留空字段删除所有的喜欢。</p>
+    <textarea id="starsexport"></textarea><br>
+    <button id="importstyles">导入</button>
+    
+    <dialog id="stylesDialog">
+        <form>
+        <p><strong>警告!</strong><br>这将替换所有当前喜欢的样式。</p>
+        <div>
+        <button id="stylesDialogConfirm" value="default">确认</button>
+        <button value="cancel" formmethod="dialog">取消</button>
+        </div>
+        </form>
+    </dialog>
+
     <h3>Credits</h3>
     
-    <p>A BIG THANK YOU TO</p>
-    <p>Code from Himuro-Majika's <a href="https://github.com/himuro-majika/Stable_Diffusion_image_metadata_viewer">Stable Diffusion image metadata viewer</a> browser extension</p>
-    <p>Reading metadata with <a href="https://github.com/mattiasw/ExifReader">ExifReader</a>, extra search results supported by <a href="https://github.com/aceakash/string-similarity">String-Similarity</a></p>
-    <p><a href="https://github.com/verlok/vanilla-lazyload">Lazyload Script</a> from Verlok, webfont is Google's <a href="https://fonts.google.com/specimen/Roboto">Roboto</a>, SVG icons from <a href="https://github.com/ionic-team/ionicons">Ionicons</a></p>
-    <p>Automatic1111 for the <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui">Stable Diffusion Web UI</a></p>
-    <p>Stable Diffusion by <a href="https://ommer-lab.com/research/latent-diffusion-models/">LMU</a> and <a href="https://stability.ai/">stability.ai</a></p>
+    <p>感谢名单</p>
+    <p>Code from Himuro-Majika's <a href="https://github.com/himuro-majika/Stable_Diffusion_image_metadata_viewer" target="_blank">Stable Diffusion image metadata viewer</a> browser extension</p>
+    <p>Reading metadata with <a href="https://github.com/mattiasw/ExifReader" target="_blank">ExifReader</a>, extra search results supported by <a href="https://github.com/aceakash/string-similarity" target="_blank">String-Similarity</a></p>
+    <p><a href="https://github.com/verlok/vanilla-lazyload" target="_blank">Lazyload Script</a> from Verlok, webfont is Google's <a href="https://fonts.google.com/specimen/Roboto" target="_blank">Roboto</a>, SVG icons from <a href="https://github.com/ionic-team/ionicons" target="_blank">Ionicons</a></p>
+    <p>Automatic1111 for the <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui" target="_blank">Stable Diffusion Web UI</a></p>
+    <p>Stable Diffusion by <a href="https://ommer-lab.com/research/latent-diffusion-models/" target="_blank">LMU</a> and <a href="https://stability.ai/" target="_blank">stability.ai</a></p>
 
     <h3>Useful Links</h3>
     
     <p>Links that helped me understand the technical side of Stable Diffusion (no affiliation):</p>
     
     <ul>
-        <li><a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki">Automatic111 Wiki</a></li>
-        <li><a href="https://stable-diffusion-art.com/tutorials/">Stable-Diffusion-Art.com - Tutorials</a></li>
+        <li><a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki" target="_blank">Automatic111 Wiki</a></li>
+        <li><a href="https://stable-diffusion-art.com/tutorials/" target="_blank">Stable-Diffusion-Art.com - Tutorials</a></li>
     </ul>
-
-    <h3>Errors</h3>
-    
-    <p>All information has been collected with the utmost care, however, mistakes happen. Location information is sometimes difficult when artists move very early in life, or the indication of the era, if the lifetime falls between two centuries.</p>
-
-    <h3>Settings</h3>
-
-    <h4>Allow Copying of Categories</h4>
-    
-    <div>
-        <input type="checkbox" id="copycat" name="copycat">
-        <label for="copycat">Let me copy categories by clicking on them (automated reload of page)</label>
-    </div>
-
-    <h4>Liked Styles Backup</h4>
-    
-    <p>In case something breaks, allows you to save a backup of your favorite styles.</p>
-    <p><strong>Clicking 'Import' will replace your liked styles</strong> with what is in this textfield.<br>Leave field empty to delete all likes.</p>
-    <textarea id="starsexport"></textarea><br>
-    <button id="importstyles">Import</button>
-    
-    <dialog id="stylesDialog">
-        <form>
-        <p><strong>Warning!</strong><br>This will replace all currently liked styles.</p>
-        <div>
-        <button id="stylesDialogConfirm" value="default">Confirm</button>
-        <button value="cancel" formmethod="dialog">Cancel</button>
-        </div>
-        </form>
-    </dialog>
-
 
 </section>
 
-<footer>Created 2023 - Version 1.2.0 - <a href="https://github.com/SupaGruen/StableDiffusion-CheatSheet">GitHub</a></footer>
+<footer>&copy; <a href="https://www.qpipi.com" target="_blank">Qpipi.com</a> - by <a href="https://github.com/SupaGruen/StableDiffusion-CheatSheet" target="_blank">GitHub</a></footer>
 
-<span id="snackbar">Copied to Clipboard</span>
+<span id="snackbar">已复制到剪贴板</span>
 
 </body>
 </html>
