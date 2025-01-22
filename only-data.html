@@ -185,15 +185,15 @@ document.addEventListener("DOMContentLoaded",function(event){
     
     
     outputExcluded = outputExcluded + '<table id="excludedartists">';
-    outputExcluded = outputExcluded + '<tr><th></th><th></th><th>Name</th><th>Prompt used</th><th>Extrainfo</th></tr>';
+    outputExcluded = outputExcluded + '<tr><th></th><th></th><th>名称</th><th>已使用提示</th><th>附加信息</th></tr>';
     
     const titletexts = [];
-    titletexts[404] = 'Artist not known';
-    titletexts[304] = 'Something is recognized, but it\'s not related to the artist';
-    titletexts[301] = 'Something is recognized, but results are too different';
-    titletexts[205] = 'Artist is recognized, but difficult to prompt/not flexible';
-    titletexts[204] = 'Artist is recognized, but too different/generic';
-    titletexts[500] = 'Other';
+titletexts[404]='未知艺术家';
+titletexts[304]='某物被识别，但与艺术家无关';
+titletexts[301]='有些东西被识别出来了，但结果太不一样了';
+titletexts[205]='艺术家得到认可，但难以提示/不灵活';
+titletexts[204]='艺术家得到认可，但太不同/太笼统';
+titletexts[500]='其他';
 
     //Put JSON in DOM
     for(var i=0; i<exclArtists.length; i++){
@@ -260,9 +260,9 @@ document.addEventListener("DOMContentLoaded",function(event){
 
 <section>
 
-    <h2 id="notavailable">Unavailable Artists</h2>
+    <h2 id="notavailable">无法使用的艺术家</h2>
     
-    <p>Manually checked. Hover over colors for more info.</p>
+    <p>手动检查。将鼠标悬停在颜色上以获取更多信息。</p>
     
     <p class="legend">
 <span class=“style-404”>█</span>稳定扩散不知名的艺术家<br>
